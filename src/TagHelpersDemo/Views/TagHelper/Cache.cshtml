@@ -1,0 +1,43 @@
+﻿@model WebSiteInfoViewModel
+@{
+    
+}
+
+<h2>Cache TagHelper</h2>
+
+<cache enabled="true" expires-after="@TimeSpan.FromMinutes(10)" priority="@CacheItemPriority.High">
+  1  @DateTime.Now
+</cache>
+
+<cache enabled="true" expires-on="@DateTime.Today.AddSeconds(20)">
+  2  @DateTime.Now
+</cache>
+
+
+<cache enabled="true"  expires-sliding="@TimeSpan.FromMinutes(1)">
+    3  @DateTime.Now
+</cache>
+
+<cache enabled="true"  vary-by="@ViewBag.ProductId">
+    3  @DateTime.Now
+</cache>
+
+<cache enabled="true"  vary-by-cookie="cookieName">
+    3  @DateTime.Now
+</cache>
+
+<cache enabled="true" vary-by-header="User-Agent">
+    3  @DateTime.Now
+</cache>
+
+<cache enabled="true" vary-by-query="search">
+    3  @DateTime.Now
+</cache>
+
+<cache enabled="true" vary-by-user="true">
+    3  @DateTime.Now
+</cache>
+
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

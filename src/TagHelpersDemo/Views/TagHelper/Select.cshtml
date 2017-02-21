@@ -1,0 +1,24 @@
+﻿@model WebSiteInfoViewModel
+@{
+    ViewBag.Data =  new  List<SelectListItem>(){
+        new SelectListItem() { Value="it-IT", Text="Italiano", Selected=true }
+        ,new SelectListItem() { Value="en-US", Text="Inglese" }
+        ,new SelectListItem() { Value="de-DE", Text="Tedesco" }
+        ,new SelectListItem() { Value="fr-FR", Text="Francese" }
+
+    };
+}
+
+<h2>Select TagHelper</h2>
+<label for="LanguageId">Selezione Singola</label>
+<select asp-for="@Model.LanguageId" asp-items="ViewBag.Data" class="form-control"></select>
+
+<label for="SupportedLanguages">Selezione Multipla</label>
+<select asp-for="@Model.SupportedLanguages" asp-items="ViewBag.Data" class="form-control"></select>
+
+
+
+@Html.DropDownList("Data", null, new { @class = "form-control",id="LanguageId" })  
+
+@*@Html.DropDownListFor(m => m.LanguageId, ViewBag.Data, new { @class = "form-control" })*@
+

@@ -1,0 +1,12 @@
+﻿@model WebSiteInfoViewModel
+@{
+
+}
+
+<h2>TextArea TagHelper</h2>
+<label for="Description">Descrizione</label>
+<textarea asp-for="Description" class="form-control" cols="20" rows="5"></textarea>
+
+
+
+@Html.TextArea("Description", null, new { @class = "form-control", cols = "20", rows = "5" })  

@@ -1,0 +1,21 @@
+﻿@model WebSiteInfoViewModel
+@{
+    
+}
+
+<h2>Input TagHelper</h2>
+<label asp-for="Email" class="label label-primary"></label>
+<input asp-for="Email" class="form-control" value="" />
+
+<input asp-for="LatestUpdate" class="form-control" asp-format="{0:dd/MM}" value="" />
+
+
+<input asp-for="DefaultUrl" class="form-control" value=""  />
+
+@Html.TextBoxFor( m=>m.DefaultUrl, "",new { @class="form-control", type="Url"})
+
+
+
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

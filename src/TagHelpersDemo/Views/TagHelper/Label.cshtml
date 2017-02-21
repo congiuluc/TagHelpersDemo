@@ -1,0 +1,13 @@
+﻿@model WebSiteInfoViewModel
+@{
+
+}
+
+<h2>Label TagHelper</h2>
+<label asp-for="Description" class="label label-primary"></label>
+<textarea asp-for="Description" class="form-control" cols="20" rows="5"></textarea>
+
+
+
+
+@Html.Label("Description", null, new { @class = "label label-primary"})  
